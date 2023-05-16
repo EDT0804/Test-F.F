@@ -1,0 +1,29 @@
+// Colors
+$reflective-yellow: rgb(29, 148, 18);
+$black-pearl: #ad9494;
+$bunting:  #000000;
+$mirage: #000000;
+$gray: #5f5b5b;
+$white: #ffffff;
+
+$color__main: $gray;
+$color__primary: $black-pearl;
+$color__primary-2: $bunting;
+$color__primary-3: $mirage;
+$color__secondary: $reflective-yellow;
+$color__label: $gray;
+$color__label-on-primary-2: lighten($color__primary, 9%);
+$button-gradient: linear-gradient(to bottom, lighten($color__secondary, 7%) 0%, $color__secondary 70%);
+
+// Fonts
+$font__sans-serif: 'Overpass', sans-serif;
+$font__monospace: 'Roboto Mono', monospace;
+
+// Sizes
+$sidebar-width: 100px;
+$sidebar-width-xs: 70px;
+
+$legend-font-size: 1em;
+$legend-margin-bottom: 15px;
+
+$input-height: 50px;
