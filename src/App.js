@@ -1,10 +1,10 @@
 import React from 'react';
-import standards from 'standards.json';
-import { getPassFail, getNextLowestKey, getNextHighestKey } from 'utils/Helpers';
-import Sidebar from 'components/Sidebar';
-import Main from 'components/Main';
-import Footer from 'components/Footer';
-import ResultsDial from 'components/ResultsDial';
+import standards from './standards.json';
+import { getPassFail, getNextLowestKey, getNextHighestKey } from './utils/Helpers';
+import Sidebar from './components/Sidebar';
+import Main from './components/Main';
+import Footer from './components/Footer';
+import ResultsDial from './components/ResultsDial';
 
 class App extends React.Component {
 
@@ -54,7 +54,7 @@ class App extends React.Component {
 
   handleChange(event) {
    const value = event.target.value;
-    const id = event.replace('sufsk_', '');target.id;
+    // const id = event.replace('sufsk_', '')target.id;
   }
 
   calculateScore() {

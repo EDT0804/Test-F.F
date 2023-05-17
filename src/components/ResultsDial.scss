@@ -1,6 +1,6 @@
-@import "styles/variables";
-@import "styles/mixins";
-@import "styles/placeholders";
+@import "./styles/variables";
+@import "./styles/mixins";
+@import "./styles/placeholders";
 
 .ResultsDial {
     @include make-room-for-sidebar;
