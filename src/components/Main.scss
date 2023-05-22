@@ -3,6 +3,7 @@
 @import "./styles/placeholders";
 
 .Main {
+
     @include make-room-for-sidebar;
     padding-bottom: 10px;
 

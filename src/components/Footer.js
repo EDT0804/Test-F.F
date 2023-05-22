@@ -5,7 +5,7 @@ const Footer = (props) => {
     return (
         <footer className="Footer">
             <div className="container">
-                <p className="credit">SUFSK created by Dardan IBRAHIMI and Fatos FRANGU</p>
+                <p className="credit">SUFSK u krijua nga Dardan IBRAHIMI dhe Fatos FRANGU</p>
             </div>
         </footer>
     )

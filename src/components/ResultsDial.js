@@ -14,7 +14,7 @@ class ResultsDial extends React.Component {
                 <div className="container">
                     <div className="dial-wrapper">
                         <div className="total-group">
-                            <p className="label"></p>
+                            <p className="label">GJITHËSEJ PIKËT</p>
                             <p className="score">{this.props.score.total}</p>
                         </div>
                         <div className="score-group">
@@ -40,7 +40,7 @@ class ResultsDial extends React.Component {
                                     <p className="score">{this.props.score.mp}</p>
                                     </div>
                                 <div className="column">
-                                    <p className="label">2KMVRAPIM</p>
+                                    <p className="label">2kmVRAPIM</p>
                                     <p className="score">{this.props.score.run}</p>
                                 </div>
                             </div>
