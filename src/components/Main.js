@@ -48,14 +48,25 @@ render() {
                     <label className="label" htmlFor="sufsk_np">NGRITJA E PESHËS </label>
                     <div className="control">
                         <input className="input" type="number" pattern="[0-9]*" min="0" inputMode="numeric" id="sufsk_np" onChange={this.props.handleChange} placeholder="0" />
-                    </div>
                 </div>
-                <div className="field">
-                    <label className="label" htmlFor="sufsk_mp">MBËSHTETJE MBI PARAKRAHË </label>
-                    <div className="control">
-                        <input className="input" type="number" pattern="[0-9]*" min="0" inputMode="numeric" id="sufsk_mp" onChange={this.props.handleChange} placeholder="0" />
+               </div>
+                    <div className="columns">
+                        <div className="column">
+                            <div className="field">
+                                <label className="label" htmlFor="sufsk_min">MBËSHTETJE MBI PARAKRAHË</label>
+                                <div className="control">
+                                    <input className="input" type="number" pattern="[0-9]*" min="0" max="99" inputMode="numeric" id="sufsk_min" onChange={this.props.handleChange} placeholder="00" />
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                        <div className="column">
+                            <div className="field">
+                                <label className="label" htmlFor="sufsk_sec">&nbsp;</label>
+                                <div className="control">
+                                    <input className="input" type="number" pattern="[0-9]*" min="0" max="59" inputMode="numeric" id="sufsk_sec" onChange={this.props.handleChange} placeholder="00" />
+                                </div>
+                            </div>
+                        </div>
                     <div className="columns">
                         <div className="column">
                             <div className="field">
@@ -75,9 +86,9 @@ render() {
                         </div>
                     </div>
                 </div>
-            </main>
-        )
+            </div>
+        </main>
+        );
     }
 }
-
 export default Main;

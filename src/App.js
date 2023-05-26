@@ -19,7 +19,8 @@ constructor() {
         po: '0',
         kl: '0',
         np: '0',
-        mp: '0',
+        min: '00',
+        sec: '00',
         min: '00',
         sec: '00'
       },
@@ -78,8 +79,10 @@ constructor() {
       count.kl = value;
     } else if ('np' === id) {
       count.np = value;
-    } else if ('mp' === id) {
-      count.mp = value;
+    } else if ('min' === id) {
+      count.min = value.padStart(2, "0");
+    } else if ('sec' === id) {
+      count.sec = value.padStart(2, "0");
     } else if ('min' === id) {
       count.min = value.padStart(2, "0");
     } else if ('sec' === id) {
@@ -101,15 +104,20 @@ constructor() {
    const poFinal = getNextLowestKey(poArray, count.po);
    const klFinal = getNextLowestKey(klArray, count.kl);
    const npFinal = getNextLowestKey(npArray, count.np);
-   const mpFinal = getNextLowestKey(mpArray, count.mp);
+ 
 
    // grab the scores from the json data
    score.ssh = standards[gender]['sprint me shtrirje'][sshFinal][0][age];
    score.po = standards[gender]['pompa'][poFinal][0][age];
    score.kl = standards[gender]['kërcim së largu'][klFinal][0][age];
    score.np = standards[gender]['ngritja e peshës'][npFinal][0][age];
-   score.mp = standards[gender]['mbështetje mbi parakrahë'][mpFinal][0][age];
-
+   
+    if ((count.min + count.sec) === '0000') {
+     score.mp = 0;
+    } else {
+     // filter user mp time to be taken from available time
+     const mpFinal = getNextHighestKey(timeArray, (count.min + count.sec));
+     score.mp = standards[gender]['mbështetje mbi parakrahë'][mpFinal][0][age];
     if ((count.min + count.sec) === '0000') {
      score.run = 0;
     } else {
@@ -132,7 +140,7 @@ constructor() {
    this.setState({ pass });
    this.setState({ error });
   }
-
+}
   render() {
     return (
       <div className="App">
