@@ -37,7 +37,7 @@ class ResultsDial extends React.Component {
                                     </div>
                                     <div className="column">
                                     <p className="label">MP</p>
-                                    <p className="score">{this.props.score.mp}</p>
+                                    <p className="score">{this.props.score.plank}</p>
                                     </div>
                                 <div className="column">
                                     <p className="label">2kmVRAPIM</p>

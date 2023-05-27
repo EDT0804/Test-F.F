@@ -7,9 +7,9 @@ import Main from './components/Main';
 import Footer from './components/Footer';
 import ResultsDial from './components/ResultsDial';
 
+
 class App extends React.Component {
-  
-constructor() {
+  constructor() {
     super();
     this.state = {
       gender: 'male',
@@ -19,8 +19,8 @@ constructor() {
         po: '0',
         kl: '0',
         np: '0',
-        min: '00',
-        sec: '00',
+        mi: '00',
+        se: '00',
         min: '00',
         sec: '00'
       },
@@ -29,7 +29,7 @@ constructor() {
         po: '0',
         kl: '0',
         np: '0',
-        mp: '0',
+        plank: '0',
         run: '0',
         total: '0'
       },
@@ -38,18 +38,18 @@ constructor() {
         po: false,
         kl: false,
         np: false,
-        mp: false,
+        plank: false,
         run: false
       },
-        error: {
+      error: {
         ssh: false,
         po: false,
         kl: false,
         np: false,
-        mp: false,
+        plank: false,
         run: false
       }
-    }
+    };
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -57,98 +57,85 @@ constructor() {
     const value = event.target.value;
     const id = event.target.id.replace('sufsk_', '');
 
-    let gender = this.state.gender;
-    let age = this.state.age;
-    let score = { ...this.state.score };
-    let count = { ...this.state.count };
-    let pass = { ...this.state.pass };
-    let error = { ...this.state.error };
+    let { gender, age, score, count, pass, error } = this.state;
 
-    // assign changed value to corresponding item
-    if (id.startsWith("gender_")) {
-     gender = value;
-     this.setState({ gender });
-    } else if (id.startsWith("age_")) {
+    if (id.startsWith('gender_')) {
+      gender = value;
+    } else if (id.startsWith('age_')) {
       age = value;
-      this.setState({ age });
-    } else if ('ssh' === id) {
+    } else if (id === 'ssh') {
       count.ssh = value;
-    } else if ('po' === id) {
+    } else if (id === 'po') {
       count.po = value;
-    } else if ('kl' === id) {
+    } else if (id === 'kl') {
       count.kl = value;
-    } else if ('np' === id) {
+    } else if (id === 'np') {
       count.np = value;
-    } else if ('min' === id) {
-      count.min = value.padStart(2, "0");
-    } else if ('sec' === id) {
-      count.sec = value.padStart(2, "0");
-    } else if ('min' === id) {
-      count.min = value.padStart(2, "0");
-    } else if ('sec' === id) {
-      count.sec = value.padStart(2, "0");
+    } else if (id === 'mi') {
+      count.mi = value.padStart(2, '0');
+    } else if (id === 'se') {
+      count.se = value.padStart(2, '0');
+    } else if (id === 'min') {
+      count.min = value.padStart(2, '0');
+    } else if (id === 'sec') {
+      count.sec = value.padStart(2, '0');
     } else {
-    alert('Something went wrong.');
-  }
-
-   // change object keys to arrays for easier sorting
-   const sshArray = Object.keys(standards[gender]['sprint me shtrirje']);
-   const poArray = Object.keys(standards[gender]['pompa']);
-   const klArray = Object.keys(standards[gender]['kërcim së largu']);
-   const npArray = Object.keys(standards[gender]['ngritja e peshës']);
-   const mpArray = Object.keys(standards[gender]['mbështetje mbi parakrahë']);
-   const timeArray = Object.keys(standards[gender]['run']);
-
-   // filter user reps to be within available range
-   const sshFinal = getNextLowestKey(sshArray, count.ssh);
-   const poFinal = getNextLowestKey(poArray, count.po);
-   const klFinal = getNextLowestKey(klArray, count.kl);
-   const npFinal = getNextLowestKey(npArray, count.np);
- 
-
-   // grab the scores from the json data
-   score.ssh = standards[gender]['sprint me shtrirje'][sshFinal][0][age];
-   score.po = standards[gender]['pompa'][poFinal][0][age];
-   score.kl = standards[gender]['kërcim së largu'][klFinal][0][age];
-   score.np = standards[gender]['ngritja e peshës'][npFinal][0][age];
-   
-    if ((count.min + count.sec) === '0000') {
-     score.mp = 0;
-    } else {
-     // filter user mp time to be taken from available time
-     const mpFinal = getNextHighestKey(timeArray, (count.min + count.sec));
-     score.mp = standards[gender]['mbështetje mbi parakrahë'][mpFinal][0][age];
-    if ((count.min + count.sec) === '0000') {
-     score.run = 0;
-    } else {
-      // filter user run time to be taken from available time
-     const runFinal = getNextHighestKey(timeArray, (count.min + count.sec));
-     score.run = standards[gender]['run'][runFinal][0][age];
+      alert('Something went wrong.');
+      return;
     }
-    score.total = score.ssh + score.po + score.kl + score.np + score.mp + score.run;
 
-   // get pass/fail (boolean)
-   pass.ssh = getPassFail(score.ssh);
-   pass.po = getPassFail(score.po);
-   pass.kl = getPassFail(score.kl);
-   pass.np = getPassFail(score.np);
-   pass.mp = getPassFail(score.mp);
-   pass.run = getPassFail(score.run);
+    const sshArray = Object.keys(standards[gender]['sprint me shtrirje']);
+    const poArray = Object.keys(standards[gender]['pompa']);
+    const klArray = Object.keys(standards[gender]['kërcim së largu']);
+    const npArray = Object.keys(standards[gender]['ngritja e peshës']);
+    const plankArray = Object.keys(standards[gender]['plank']);
+    const timeArray = Object.keys(standards[gender]['run']);
 
-   this.setState({ score });
-   this.setState({ count });
-   this.setState({ pass });
-   this.setState({ error });
+    const sshFinal = getNextLowestKey(sshArray, count.ssh);
+    const poFinal = getNextLowestKey(poArray, count.po);
+    const klFinal = getNextLowestKey(klArray, count.kl);
+    const npFinal = getNextLowestKey(npArray, count.np);
+
+    score.ssh = standards[gender]['sprint me shtrirje'][sshFinal][0][age];
+    score.po = standards[gender]['pompa'][poFinal][0][age];
+    score.kl = standards[gender]['kërcim së largu'][klFinal][0][age];
+    score.np = standards[gender]['ngritja e peshës'][npFinal][0][age];
+
+    if (count.mi + count.se === '0000') {
+      score.plank = 0;
+    } else {
+      const plankFinal = getNextHighestKey(plankArray, count.mi + count.se);
+      score.plank = standards[gender]['plank'][plankFinal][0][age];
+    }
+
+    if (count.min + count.sec === '0000') {
+      score.run = 0;
+    } else {
+      const runFinal = getNextHighestKey(timeArray, count.min + count.sec);
+      score.run = standards[gender]['run'][runFinal][0][age];
+    }
+
+    score.total = parseInt(score.ssh) + parseInt(score.po) + parseInt(score.kl) + parseInt(score.np) + parseInt(score.plank) + parseInt(score.run);
+
+    pass.ssh = getPassFail(score.ssh);
+    pass.po = getPassFail(score.po);
+    pass.kl = getPassFail(score.kl);
+    pass.np = getPassFail(score.np);
+    pass.plank = getPassFail(score.plank);
+    pass.run = getPassFail(score.run);
+
+    this.setState({ gender, age, score, count, pass, error });
   }
-}
+
   render() {
     return (
       <div className="App">
+        <Navbar />
         <Sidebar handleChange={this.handleChange} age={this.state.age} />
         <ResultsDial handleChange={this.handleChange} score={this.state.score} pass={this.state.pass} r="60" />
         <Main handleChange={this.handleChange} score={this.state.score} gender={this.state.gender} count={this.state.count} />
         <Footer />
-        </div>
+      </div>
     );
   }
 }

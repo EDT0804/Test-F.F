@@ -64,6 +64,15 @@
             transform: translateX(100%);
         }
     }
+    [for="sufsk_se"] + .control {
+        position: relative;
+        &::before {
+            position: absolute;
+            content: ':';
+            left: -9px;
+            line-height: $input-height;
+                    }
+    }
 
     [for="sufsk_sec"] + .control {
         position: relative;
@@ -87,5 +96,4 @@
         margin-bottom: 9px;
         display: block;
     }
-
 }

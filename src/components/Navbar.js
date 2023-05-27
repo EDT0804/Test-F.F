@@ -1,12 +1,14 @@
+// Navbar.js
 import React, { useRef } from 'react';
 import './Navbar.scss';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 function Navbar() {
   const navRef = useRef();
 
   const showNavbar = () => {
-    navRef.current.classList.toggle("responsive_nav");
+    navRef.current.classList.toggle('responsive_nav');
   };
 
   return (
@@ -18,11 +20,11 @@ function Navbar() {
         <a href="/#">Ushtrime</a>
         <a href="/#">Testi fizik</a>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
-          <FaTimes />
+          <FontAwesomeIcon icon={faTimes} />
         </button>
       </nav>
       <button className="nav-btn" onClick={showNavbar}>
-        <FaBars />
+        <FontAwesomeIcon icon={faBars} />
       </button>
     </header>
   );
