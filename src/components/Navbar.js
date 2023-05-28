@@ -15,10 +15,10 @@ function Navbar() {
     <header>
       <h3>logo</h3>
       <nav>
-        <a href="/#">Kryefaqja</a>
+        <a href="/#">Ballina</a>
+        <a href="/#">SUFSK</a>
+        <a href="/#">Ushtrimet</a>
         <a href="/#">Kalkulatori</a>
-        <a href="/#">Ushtrime</a>
-        <a href="/#">Testi fizik</a>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FontAwesomeIcon icon={faTimes} />
         </button>

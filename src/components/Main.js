@@ -50,7 +50,7 @@ render() {
                         <input className="input" type="number" pattern="[0-9]*" min="0" inputMode="numeric" id="sufsk_np" onChange={this.props.handleChange} placeholder="0" />
                 </div>
                </div>
-                    <div className="columns1">
+                    <div className="columns">
                         <div className="column">
                             <div className="field">
                                 <label className="label" htmlFor="sufsk_mi">MBËSHTETJE MBI PARAKRAHË</label>
@@ -65,7 +65,7 @@ render() {
                                     <input className="input" type="number" pattern="[0-9]*" min="0" max="59" inputMode="numeric" id="sufsk_se" onChange={this.props.handleChange} placeholder="00" />
                                 </div>
                         </div>
-                        <div className="columns2">
+                        <div className="columns">
                             <div className="column">
                             <div className="field">
                                 <label className="label" htmlFor="sufsk_min">2-km VRAPIM</label>

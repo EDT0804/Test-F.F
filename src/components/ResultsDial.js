@@ -18,28 +18,28 @@ class ResultsDial extends React.Component {
                             <p className="score">{this.props.score.total}</p>
                         </div>
                         <div className="score-group">
-                            <div className="columns">
-                                <div className="column">
+                            <div className="field">
+                                <div className="field">
                                     <p className="label">SSH</p>
                                     <p className="score">{this.props.score.ssh}</p>
                                 </div>
-                                <div className="column">
+                                <div className="field">
                                     <p className="label">PO</p>
                                     <p className="score">{this.props.score.po}</p>
                                 </div>
-                                <div className="column">
+                                <div className="field">
                                     <p className="label">KL</p>
                                     <p className="score">{this.props.score.kl}</p>
                                     </div>
-                                    <div className="column">
+                                    <div className="field">
                                     <p className="label">NP</p>
                                     <p className="score">{this.props.score.np}</p>
                                     </div>
-                                    <div className="column">
+                                    <div className="field">
                                     <p className="label">MP</p>
                                     <p className="score">{this.props.score.plank}</p>
                                     </div>
-                                <div className="column">
+                                <div className="field">
                                     <p className="label">2kmVRAPIM</p>
                                     <p className="score">{this.props.score.run}</p>
                                 </div>

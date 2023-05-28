@@ -34,7 +34,7 @@
     .radial-progress-cover {
         will-change: stroke-dashoffset;
         stroke: $color__primary-2;
-        stroke-width: 11px;
+        stroke-width: 10px;
         transition: .5s ease;
     }
 
@@ -63,38 +63,40 @@
 
     .label {
         margin: 0;
-        font-size: .8em;
+        font-size: 0.8em;
+        color: rgb(55, 56, 54);
     }
 
     .total-group {
         padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 15px;
         position: absolute;
         left: 0;
-        right: 0;
-        top: 23%;
+        left: 0;
+        top: 25%;
         text-align: center;
         z-index: 1;
 
         .score {
             font-size: 5em;
-            color: lighten($color__label, 10%);
+            color: rgb(51, 50, 50);
         }
 
     }
 
     .score-group {
-        padding-left: 3em;
+        padding-right: 3em;
         padding-right: 3em;
         position: absolute;
-        left: 0;
         right: 0;
-        top: 58%;
-        text-align: center;
+        right: 0;
+        top: 1%;
+        text-align: left;
         z-index: 1;
 
         .score {
-            font-size: 1.8em;
+            font-size: 1em;
+            color: rgb(51, 50, 50);
         }
 
         .columns {
