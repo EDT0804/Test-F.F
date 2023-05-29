@@ -1,5 +1,6 @@
 import React from 'react';
 import './Main.scss';
+import Navbar from '/components/Navbar.js'
 
 class Main extends React.Component {
 
