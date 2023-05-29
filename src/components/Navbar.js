@@ -1,32 +1,17 @@
 // Navbar.js
-import React, { useRef } from 'react';
-import './Navbar.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import React from 'react';
 
 function Navbar() {
-  const navRef = useRef();
-
-  const showNavbar = () => {
-    navRef.current.classList.toggle('responsive_nav');
-  };
-
   return (
-    <header>
-      <h3>logo</h3>
-      <nav>
-        <a href="/#">Ballina</a>
-        <a href="/#">SUFSK</a>
-        <a href="/#">Ushtrimet</a>
-        <a href="/#">Kalkulatori</a>
-        <button className="nav-btn nav-close-btn" onClick={showNavbar}>
-          <FontAwesomeIcon icon={faTimes} />
-        </button>
+    <>
+      <nav className="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+        {/* Navbar content */}
       </nav>
-      <button className="nav-btn" onClick={showNavbar}>
-        <FontAwesomeIcon icon={faBars} />
-      </button>
-    </header>
+
+      <div className="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+        {/* Navbar content */}
+      </div>
+    </>
   );
 }
 

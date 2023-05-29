@@ -1,12 +1,13 @@
+// KalkulatoriTFSection.js
 import React from 'react';
-import Sidebar from '../components/Sidebar'; // Update the path accordingly
-import Main from '../components/Main'; // Update the path accordingly
-import Footer from '../components/Footer'; // Update the path accordingly
-import ResultsDial from '../components/ResultsDial'; // Update the path accordingly
+import Sidebar from './Sidebar'; // Update the path accordingly
+import Main from './Main'; // Update the path accordingly
+import Footer from './Footer'; // Update the path accordingly
+import ResultsDial from './ResultsDial'; // Update the path accordingly
 import standards from '../standards.json';
 import { getPassFail, getNextLowestKey, getNextHighestKey } from '../utils/Helpers'; // Update the path accordingly
 
-class Kalkulatori extends React.Component {
+class KalkulatoriTFSection extends React.Component {
  constructor() {
     super();
     this.state = {
@@ -126,8 +127,8 @@ class Kalkulatori extends React.Component {
   }
 
   render() {
-    return (
-      <div className="App">
+      return (
+        <div className="w3-content w3-justify w3-text-grey w3-padding-64" id="sufsk">
         <Sidebar handleChange={this.handleChange} age={this.state.age} />
         <ResultsDial handleChange={this.handleChange} score={this.state.score} pass={this.state.pass} r="60" />
         <Main handleChange={this.handleChange} score={this.state.score} gender={this.state.gender} count={this.state.count} />
@@ -137,4 +138,4 @@ class Kalkulatori extends React.Component {
   }
 }
 
-export default Kalkulatori;
+export default KalkulatoriTFSection;

@@ -1,25 +1,22 @@
+// App.js
 import React from 'react';
-import Navbar from './components/Navbar';
-import Kalkulatori from './components/Kalkulatori.js';
+import Navbar from './components/Navbar.js';
+import Header from './components/Header.js';
+import SufskSection from './components/SufskSection.js';
+import UshtrimetSection from './components/UshtrimetSection.js';
+import KalkulatoriTFSection from './components/KalkulatoriTFSection.js';
 
 function App() {
-  let component;
-  switch (window.location.pathname) {
-    case "/":
-      component = <sufsk />;
-      break;
-    case "/kalkulatori":
-      component = <Kalkulatori />;
-      break;
-    default:
-      component = null;
-  }
-
   return (
-    <>
+    <body className="w3-black">
       <Navbar />
-      <div className="container">{component}</div>
-    </>
+      <div id="main">
+        <Header />
+        <SufskSection />
+        <UshtrimetSection />
+        <KalkulatoriTFSection />
+      </div>
+    </body>
   );
 }
 
