@@ -1,10 +1,9 @@
 // App.js
 import React from 'react';
-import Navbar from './components/Navbar.js';
-import Header from './components/Header.js';
-import SufskSection from './components/SufskSection.js';
-import UshtrimetSection from './components/UshtrimetSection.js';
-import KalkulatoriTFSection from './components/KalkulatoriTFSection.js';
+import Header from './pages/Header.js';
+import SufskSection from './pages/SufskSection.js';
+import UshtrimetSection from './pages/UshtrimetSection.js';
+import KalkulatoriTFSection from './pages/KalkulatoriTFSection.js';
 
 function App() {
   return (

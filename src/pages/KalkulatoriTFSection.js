@@ -1,9 +1,9 @@
 // KalkulatoriTFSection.js
 import React from 'react';
-import Sidebar from './Sidebar'; // Update the path accordingly
-import Main from './Main'; // Update the path accordingly
-import Footer from './Footer'; // Update the path accordingly
-import ResultsDial from './ResultsDial'; // Update the path accordingly
+import Sidebar from '../components/Sidebar'; // Update the path accordingly
+import Main from '../components/Main'; // Update the path accordingly
+import Footer from '../components/Footer'; // Update the path accordingly
+import ResultsDial from '../components/ResultsDial'; // Update the path accordingly
 import standards from '../standards.json';
 import { getPassFail, getNextLowestKey, getNextHighestKey } from '../utils/Helpers'; // Update the path accordingly
 
