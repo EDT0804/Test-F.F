@@ -1,5 +1,6 @@
 // App.js
 import React from 'react';
+import Navbar from './components/Navbar.js';
 import Header from './pages/Header.js';
 import SufskSection from './pages/SufskSection.js';
 import UshtrimetSection from './pages/UshtrimetSection.js';

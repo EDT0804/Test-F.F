@@ -1,116 +1,32 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="SUFSK">
+    <link rel="apple-touch-startup-image" href="%PUBLIC_URL%/favicons/apple-icon-57x57.png">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="%PUBLIC_URL%/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="%PUBLIC_URL%/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="%PUBLIC_URL%/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="%PUBLIC_URL%/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="%PUBLIC_URL%/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="%PUBLIC_URL%/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="%PUBLIC_URL%/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="%PUBLIC_URL%/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="%PUBLIC_URL%/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="%PUBLIC_URL%/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#2C3642">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:700|Overpass:400,700" rel="stylesheet">
     <title>SUFSK</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-    .w3-row-padding img {margin-bottom: 12px}
-    /* Set the width of the sidebar to 120px */
-    .w3-sidebar {width: 120px;background: #1f1e1e;}
-    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-    #main {margin-left: 120px}
-    /* Remove margins from "page content" on small screens */
-    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
-    </style>
   </head>
-<body class="w3-black">
-
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <!-- Avatar image in top left corner -->
-  <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/KSF_logo.svg" style="width:80%">
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
-    <i class="fa fa-home w3-xxlarge"></i>
-    <p>BALLINA</p>
-  </a>
-  <a href="#sufsk" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="arrow_forward w3-xxlarge"></i>
-    <p>SUFSK</p>
-  </a>
-  <a href="#ushtrimet" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-eye w3-xxlarge"></i>
-    <p>USHTRIMET</p>
-  </a>
-  <a href="#kalkulatori tf" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-envelope w3-xxlarge"></i>
-    <p>KALKULATORI TF</p>
-  </a>
-</nav>
-
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">BALLINA</a>
-    <a href="#sufsk" class="w3-bar-item w3-button" style="width:25% !important">SUFSK</a>
-    <a href="#ushtrime" class="w3-bar-item w3-button" style="width:25% !important">USHTRIMET</a>
-    <a href="#kalkulatoritf" class="w3-bar-item w3-button" style="width:25% !important">KALKULATORI TF</a>
-  </div>
-</div>
-
-<!-- Ballina Content -->
-<div class="w3-padding-large" id="main">
-  <!-- Header/Ballina -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="ballina">
-    <h1 class="w3-jumbo"><span class="w3-hide-small">SUFSK</h1>
-    <p>Standardi Ushtarak për Fitnes Fizik në Forcën e Sigurisë së Kosovës</p>
-    <img src="https://scontent.fprn2-1.fna.fbcdn.net/v/t39.30808-6/335155724_730918481858992_862616735948359767_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=730e14&_nc_ohc=Q5nsFkVlqZ0AX9QVX92&_nc_ht=scontent.fprn2-1.fna&oh=00_AfAuzDIxPt_2gWP28EXvmdQumiCsNyAPdw-wfPo_13UAAQ&oe=64807765" alt="boy" class="w3-image" alt="boy" class="w3-image" width="900" height="960">
-
-  </header>
-
-  <!-- SUFSK Section -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="sufsk">
-    <h2 class="w3-text-light-grey">SUFSK</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p> Qëllimi i SUFSK është për caktimin e standardeve fizike, procedurat dhe standardet e testimit mbi përgatitjen fizike bazuar në ligjet, rregulloret dhe udhëzimet administrative në fuqi të Ministrisë së Mbrojtjes së Republikës së Kosovës dhe Forcës së Sigurisë së Kosovës. 
-      
-      Fitnesi Fizik luan një rol të madhë operacional dhe zbatohet për pjestarët aktiv, rezervë, kadetë dhe rekrutë në Forcën e Sigurisë së Kosovës.
-      
-      Synimi i SUFSK është krijimi i shprehisë praktike, kulturës dhe frymës së re për Fitnesin Fizik.  
-    </p>
-    
-  </div>
-  
-  <!-- Ushtrimet Section -->
-  <div class="w3-padding-64 w3-content" id="ushtrimet">
-    <h2 class="w3-text-light-grey">Ushtrimet</h2>
-    <hr style="width:200px" class="w3-opacity">
-
-    <!-- Grid for photos -->
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half">
-        <img src="https://www.rtklive.com/sq/gallery/news_original/620366-9y84w8L7KR.jpg" style="width:100%">
-        <img src="https://attachment.outlook.live.net/owa/MSA%3Adardan.ibrahimi%40outlook.com/service.svc/s/GetAttachmentThumbnail?id=AQMkADAwATY3ZmYAZS04Y2UwLTg0ZjktMDACLTAwCgBGAAADj55YbfyD3U%2BCOaHCNBQmWAcAsmivP4L9kEyeTd3wjfpgGgAAAgEJAAAAsmivP4L9kEyeTd3wjfpgGgAGaUxKVAAAAAESABAAxzzo%2FPt2A0mogtVGXQHzvw%3D%3D&thumbnailType=2&isc=1&token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjczRkI5QkJFRjYzNjc4RDRGN0U4NEI0NDBCQUJCMTJBMzM5RDlGOTgiLCJ0eXAiOiJKV1QiLCJ4NXQiOiJjX3VidnZZMmVOVDM2RXRFQzZ1eEtqT2RuNWcifQ.eyJvcmlnaW4iOiJodHRwczovL291dGxvb2subGl2ZS5jb20iLCJ1YyI6IjhmM2IwYWMyZWVmOTQ5NmY4MDdiM2Q2ZDAyNDQ5MmRmIiwidmVyIjoiRXhjaGFuZ2UuQ2FsbGJhY2suVjEiLCJhcHBjdHhzZW5kZXIiOiJPd2FEb3dubG9hZEA4NGRmOWU3Zi1lOWY2LTQwYWYtYjQzNS1hYWFhYWFhYWFhYWEiLCJpc3NyaW5nIjoiV1ciLCJhcHBjdHgiOiJ7XCJtc2V4Y2hwcm90XCI6XCJvd2FcIixcInB1aWRcIjpcIjE4Mjk1ODExMjIyMDkwMTdcIixcInNjb3BlXCI6XCJPd2FEb3dubG9hZFwiLFwib2lkXCI6XCIwMDA2N2ZmZS04Y2UwLTg0ZjktMDAwMC0wMDAwMDAwMDAwMDBcIixcInByaW1hcnlzaWRcIjpcIlMtMS0yODI3LTQyNTk4Mi0yMzYzNTI0MzQ1XCJ9IiwibmJmIjoxNjg1ODY4MTY3LCJleHAiOjE2ODU4Njg3NjcsImlzcyI6IjAwMDAwMDAyLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMEA4NGRmOWU3Zi1lOWY2LTQwYWYtYjQzNS1hYWFhYWFhYWFhYWEiLCJhdWQiOiIwMDAwMDAwMi0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvYXR0YWNobWVudC5vdXRsb29rLmxpdmUubmV0QDg0ZGY5ZTdmLWU5ZjYtNDBhZi1iNDM1LWFhYWFhYWFhYWFhYSIsImhhcHAiOiJvd2EifQ.Qii-_2QIusE4lRPEFDKJujAcORSS0Pax1Oe2DYc6JE_q-OAXn9lfa2acZwwnc6QlfkfKj1E2B8jgvazq7216gzQUP6vrtN8P7DCpk9CHa9KU4SAqYKaKPCrF5lKsnTsWYazTVOwKHJhsBFNBzzGyNsVhr5q5Y4dalBYo7rK4N-Xpt29-bJWnhexv8GNnExWgkkP64lZcGEz92AfRTtawztSx_MN-wwvrzCWNoVun1Unz6ay0oDWx9bmuun48q3XiUshZGQ_hPqLE66Tk_B1me8Z2iNCih5xfF1vlrrRmFxVsxlx96q8O6-ckzbWY5ze2aaJ5TVEM12-16Hh62_qKqQ&X-OWA-CANARY=suJsSxZJFUGTkJkpY2e99RCNELrXZNsYYNsjrwbZWEOphRgYxgOVhoVVALCfWhZ7jS9d8zwBOLI.&owa=outlook.live.com&scriptVer=20230526012.07&animation=true" style="width:100%">
-        <img src="https://scontent.fprn2-1.fna.fbcdn.net/v/t39.30808-6/310958259_430754805900766_1665804596380551996_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=ZbWsrcyw2S0AX-XXtpR&_nc_ht=scontent.fprn2-1.fna&oh=00_AfD2W_tpyJYcyRp42wo1e1q3Qpv9fehfDdXVMeAC5CrI5w&oe=648099EC" style="width:100%">
-      </div>
-
-      <div class="w3-half">
-        <img src="https://scontent.fprn4-1.fna.fbcdn.net/v/t1.6435-9/127858072_4860210524053360_3558091021591098_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=973b4a&_nc_ohc=ouelFBjTh_kAX-x4iPQ&_nc_ht=scontent.fprn4-1.fna&oh=00_AfDVNbgVFAN_pVhLl0BBXXAVXLzhFMlW4WXbAyHxmZ4iXg&oe=649AC19B" style="width:100%">
-        <img src="https://shqip.com/app/uploads/2022/10/311414673_436289585279094_4915965182498209109_n-768x1024.jpg" style="width:100%">
-        <img src="https://scontent.fprn2-1.fna.fbcdn.net/v/t39.30808-6/343309055_213418768057423_2427206239560151644_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=730e14&_nc_ohc=dCi1tpN8BUYAX8ibINi&_nc_ht=scontent.fprn2-1.fna&oh=00_AfDB4-PwgQNkMjL2QvX-xMiSnvIjCw3GgUBNXW3Yunhmkg&oe=6480F69A" style="width:100%">
-      </div>
-    <!-- End photo grid -->
-        </button>
-      </p>
-    </form>
-  <!-- Kalkulatori TF Section -->
-  </div>
-<!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
-
-<footer class="w3-content w3-padding-64 w3-text-grey w3-large">
-  <p class="w3-small">SUFSK u krijua nga Dardan IBRAHIMI dhe Fatos FRANGU</p>
-  
-  <i class="fa fa-website-official w3-hover-opacity">https://mod.rks-gov.net</i>
-
- <!-- End footer -->
-</footer>
-
-<!-- END PAGE CONTENT -->
-</div>
-
-</body>
+  <body>
+    <div id="root"></div>
 </html>
