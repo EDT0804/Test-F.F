@@ -2,9 +2,9 @@
 import React from 'react';
 import Navbar from './components/Navbar.js';
 import Header from './pages/Header.js';
-import SufskSection from './pages/SufskSection.js';
-import UshtrimetSection from './pages/UshtrimetSection.js';
-import KalkulatoriTFSection from './pages/KalkulatoriTFSection.js';
+import SUFSK from './pages/SUFSK.js';
+import Ushtrimet from './pages/Ushtrimet.js';
+import KalkulatoriTF from './pages/KalkulatoriTF.js';
 
 function App() {
   return (
@@ -12,9 +12,9 @@ function App() {
       <Navbar />
       <div id="main">
         <Header />
-        <SufskSection />
-        <UshtrimetSection />
-        <KalkulatoriTFSection />
+        <SUFSK />
+        <Ushtrimet />
+        <KalkulatoriTF />
       </div>
     </body>
   );
