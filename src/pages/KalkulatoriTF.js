@@ -18,8 +18,8 @@ class KalkulatoriTFSection extends React.Component {
         po: '0',
         kl: '0',
         np: '0',
-        min: '00',
-        sec: '00',
+        mi: '00',
+        se: '00',
         min: '00',
         sec: '00'
       },
@@ -70,10 +70,10 @@ class KalkulatoriTFSection extends React.Component {
       count.kl = value;
     } else if (id === 'np') {
       count.np = value;
-    } else if (id === 'min') {
-      count.min = value.padStart(2, '0');
-    } else if (id === 'sec') {
-      count.sec = value.padStart(2, '0');
+    } else if (id === 'mi') {
+      count.mi = value.padStart(2, '0');
+    } else if (id === 'se') {
+      count.se = value.padStart(2, '0');
     } else if (id === 'min') {
       count.min = value.padStart(2, '0');
     } else if (id === 'sec') {
@@ -100,10 +100,10 @@ class KalkulatoriTFSection extends React.Component {
     score.kl = standards[gender]['kërcim së largu'][klFinal][0][age];
     score.np = standards[gender]['ngritja e peshës'][npFinal][0][age];
 
-    if (count.min + count.sec === '0000') {
+    if (count.mi + count.se === '0000') {
       score.plank = 0;
     } else {
-      const plankFinal = getNextHighestKey(plankArray, count.min + count.sec);
+      const plankFinal = getNextHighestKey(plankArray, count.mi + count.se);
       score.plank = standards[gender]['plank'][plankFinal][0][age];
     }
 
