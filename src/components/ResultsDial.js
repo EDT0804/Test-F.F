@@ -18,7 +18,7 @@ class ResultsDial extends React.Component {
                             <p className="score">{this.props.score.total}</p>
                         </div>
                         <div className="score-group">
-                            <div className="field">
+                            <div className="fields">
                                 <div className="field">
                                     <p className="label">SSH</p>
                                     <p className="score">{this.props.score.ssh}</p>

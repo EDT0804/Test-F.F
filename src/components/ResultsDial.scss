@@ -31,9 +31,7 @@
 
     .total-group {
         padding-left: 15px;
-        padding-left: 15px;
         position: absolute;
-        left: 0;
         left: 0;
         top: 25%;
         text-align: center;
@@ -48,11 +46,9 @@
 
     .score-group {
         padding-right: 3em;
-        padding-right: 3em;
         position: absolute;
-        right: 0;
-        right: 0;
-        top: 1%;
+        right: -30%;
+        top: 70%;
         text-align: left;
         z-index: 1;
 
@@ -68,6 +64,15 @@
         .column {
             flex: 1;
             text-align: center;
+        }
+
+    }
+    .fields{
+        display: flex;
+        text-align: center;
+
+        .field{
+            padding: 2em;
         }
 
     }
