@@ -18,8 +18,8 @@ class KalkulatoriTFSection extends React.Component {
         po: '0',
         kl: '0',
         np: '0',
-        min: '00',
-        sec: '00',
+        mi: '00',
+        se: '00',
         min: '00',
         sec: '00'
       },
@@ -70,9 +70,9 @@ class KalkulatoriTFSection extends React.Component {
       count.kl = value;
     } else if (id === 'np') {
       count.np = value;
-    } else if (id === 'min') {
+    } else if (id === 'mi') {
       count.min = value.padStart(2, '0');
-    } else if (id === 'sec') {
+    } else if (id === 'se') {
       count.sec = value.padStart(2, '0');
     } else if (id === 'min') {
       count.min = value.padStart(2, '0');
