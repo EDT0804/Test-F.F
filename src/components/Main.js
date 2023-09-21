@@ -4,7 +4,7 @@ import './Main.scss';
 class Main extends React.Component {
 
 render() {
-    console.log(this.props.handleChange);
+    //console.log(this.props.handleChange);
         return(
         <main className="Main">
             <div className="container">

@@ -103,17 +103,39 @@ class KalkulatoriTFSection extends React.Component {
     if (count.mi + count.se === '0000') {
       score.plank = 0;
     } else {
-      const plankFinal = getNextHighestKey(plankArray, count.mi + count.se);
+      //const plankFinal = getNextHighestKey(plankArray, count.mi + count.se);
+      const plankFinal =  count.mi+count.se;
+
+      console.log(count.mi);
+      console.log(count.se);
+      console.log(plankFinal);
+      console.log(standards[gender]['plank']);
+      if(standards[gender]['plank'][plankFinal]){
       score.plank = standards[gender]['plank'][plankFinal][0][age];
+      }
+      else { 
+        score.plank=-1;
+      }
     }
 
     if (count.min + count.sec === '0000') {
       score.run = 0;
     } else {
-      const runFinal = getNextHighestKey(timeArray, count.min + count.sec);
-      score.run = standards[gender]['run'][runFinal][0][age];
-    }
+      //const runFinal = getNextHighestKey(timeArray, count.min+count.sec);
+      const runFinal =  count.min+count.sec;
+      //console.log(count.min);
+      //console.log(count.sec);
+      //console.log(runFinal);
+      //console.log(standards[gender]['run']);
 
+      if(standards[gender]['run'][runFinal]){
+          score.run = standards[gender]['run'][runFinal][0][age];
+      } else { 
+        score.run=-2;
+      }
+      //score.run = standards[gender]['run'][runFinal][0][age];
+    }
+    console.log(score);
     score.total = parseInt(score.ssh) + parseInt(score.po) + parseInt(score.kl) + parseInt(score.np) + parseInt(score.plank) + parseInt(score.run);
 
     pass.ssh = getPassFail(score.ssh);
